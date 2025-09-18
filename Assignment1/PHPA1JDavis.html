@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,0">
+    <meta name="description" content="BabelBookBrowser API">
+    <meta name="author" content="Jessie Davis 200433256">
+    <title>BabelBookBrowser</title>
+    <link rel="stylesheet" href="./CSS/PHPA1JDavis.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Pirata+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <!-- Website Name -->
+    <h1>BABEL</h1>
+</header>
+
+<main>
+    <div class="container-fluid">
+
+        <!-- Main Search for any title -->
+        <section class="mb-4">
+            <div class="mb-3">
+                <label for="title-search" class="form-label h4">Search By Title</label>
+                <div class="input-group input-group-lg">
+                    <input type="text" id="title-search" name="Title" class="form-control"
+                           placeholder="Enter Any Title">
+                    <button class="btn btn-primary" type="submit" value="submit">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search filters start -->
+        <section>
+            <form>
+
+            <!-- Genre filter-->
+                <div class="mb-3">
+                    <label for="genre" class="form-label">Genre</label>
+                    <select id="genre" name="genre" class="form-select">
+                        <option value="" disabled selected>Choose Genre</option>
+                        <option value="biography">Biography</option>
+                        <option value="children">Children's</option>
+                        <option value="comics">Comic/Graphic Novels</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="history">History</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="nonfiction">Non-Fiction</option>
+                        <option value="poetry">Poetry</option>
+                        <option value="romance">Romance</option>
+                        <option value="science+fiction">Science Fiction</option>
+                        <option value="self+help">Self Help</option>
+                        <option value="young+adult">Young Adult</option>
+                    </select>
+                </div>
+
+                <!-- Author filter -->
+                <div class="mb-3">
+                    <label for="author" class="form-label">Author</label>
+                    <input type="text" id="author" class="form-control" placeholder="Author">
+                </div>
+
+                <!-- Page count min max filter -->
+                <div class="mb-3>">
+                    <label class="form-label">Page Range</label>
+                    <div class="d-flex gap-2">
+                    <input type="number" id="pageMin" class="form-control" placeholder="Min Pages" min="1">
+                    <input type="number" id="pageMax" class="form-control" placeholder="Max Pages">
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- Filter section end -->
+
+
+        <!-- Hidden results section -->
+        <section id="results-section" style="display: none;">
+            <h3>Search Results</h3>
+            <div id="results">
+                <!-- Displayed book results -->
+            </div>
+        </section>
+
+    </div>
+</main>
+<script src="./JS/PHPA1JDavis.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
